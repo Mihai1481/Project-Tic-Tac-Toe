@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border: 5px solid #0077b6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0077b6;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0077b6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.square:hover {
+    background-color: #caf0f8;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#controls input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0;
+    border: 2px solid #0077b6;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    width: 200px;
+}
+
+#controls input[type="text"]:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.5);
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px 5px;
+}
+
+#controls button:hover {
+    background-color: #00b4d8;
+    transform: scale(1.05);
+}
+
+#message, #result-display {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+#message {
+    color: #0077b6;
+}
+
+#result-display {
+    color: #d90429;
+}
